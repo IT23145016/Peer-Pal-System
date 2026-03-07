@@ -7,7 +7,7 @@ const studySessionSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    moduleRef: {
+    moduleRef: 
       type: mongoose.Schema.Types.ObjectId,
       ref: "Module",
       required: true,
