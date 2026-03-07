@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
+import PublicLayout from "./components/PublicLayout";
 import DashboardPage from "./pages/DashboardPage";
 import HelpDeskPage from "./pages/HelpDeskPage";
 import LandingPage from "./pages/LandingPage";
@@ -23,9 +24,11 @@ function ProtectedRoute({ children, allowedRoles = [] }) {
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
+      <Route element={<PublicLayout />}>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Route>
       <Route
         path="/profile"
         element={

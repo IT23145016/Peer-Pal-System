@@ -21,11 +21,103 @@ a {
 }
 
 .landing {
-  min-height: 100vh;
+  min-height: auto;
   padding: 2rem 1rem 3rem;
   display: grid;
   gap: 1rem;
   place-items: center;
+}
+.public-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: linear-gradient(180deg, #f8fafc, #e0f2fe);
+  font-family: "Inter", sans-serif;
+}
+
+/* HEADER */
+.public-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.3rem;
+
+  border-bottom: 1px solid rgba(147, 197, 253, 0.5);
+  background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(219,234,254,0.9));
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* BRAND */
+.public-brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #1e40af;
+  transition: 0.3s ease;
+}
+
+.public-brand:hover {
+  color: #2563eb;
+  transform: scale(1.05);
+}
+
+/* NAVIGATION */
+.public-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.public-nav a {
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  border-radius: 12px;
+
+  background: rgba(219, 234, 254, 0.85);
+  color: #1d4ed8;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.public-nav a:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+/* MAIN */
+.public-main {
+  min-height: 0;
+  padding: 1.5rem;
+}
+
+/* FOOTER */
+.public-footer {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.3rem;
+
+  border-top: 1px solid rgba(147, 197, 253, 0.5);
+  background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(224,242,254,0.9));
+
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.04);
+}
+
+.public-footer p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .hero-card {
@@ -1056,6 +1148,11 @@ button:disabled {
 }
 
 @media (max-width: 640px) {
+  .public-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .hero-card {
     padding: 1.4rem 1rem;
   }
