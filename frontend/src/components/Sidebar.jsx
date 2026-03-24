@@ -65,6 +65,10 @@ export default function Sidebar({ profile, onLogout, menuItems = [], activeMenu 
               <CalendarDays size={16} />
               Study Sessions
             </Link>
+            <Link to="/calendar">
+              <CalendarDays size={16} />
+              Calendar
+            </Link>
             <Link to="/dashboard?tab=modules">
               <BookOpenCheck size={16} />
               Modules
@@ -116,6 +120,10 @@ export default function Sidebar({ profile, onLogout, menuItems = [], activeMenu 
             <Link to="/study-sessions">
               <CalendarDays size={16} />
               Study Sessions
+            </Link>
+            <Link to="/calendar">
+              <CalendarDays size={16} />
+              Calendar
             </Link>
           </>
         )}

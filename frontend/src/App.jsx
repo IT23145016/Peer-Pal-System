@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
+import CalendarPage from "./pages/CalendarPage";
 import DashboardPage from "./pages/DashboardPage";
 import HelpDeskPage from "./pages/HelpDeskPage";
 import LandingPage from "./pages/LandingPage";
@@ -63,6 +64,14 @@ export default function App() {
         element={
           <ProtectedRoute allowedRoles={["admin", "user"]}>
             <StudySessionsRequestPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/calendar"
+        element={
+          <ProtectedRoute allowedRoles={["admin", "user"]}>
+            <CalendarPage />
           </ProtectedRoute>
         }
       />
