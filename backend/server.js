@@ -10,6 +10,7 @@ const assignmentRoutes = require("./src/routes/assignmentRoutes");
 const helpDeskRoutes = require("./src/routes/helpDeskRoutes");
 const moduleRoutes = require("./src/routes/moduleRoutes");
 const studySupportRoutes = require("./src/routes/studySupportRoutes");
+const calendarEventRoutes = require("./src/routes/calendarEventRoutes");
 
 dotenv.config();
 connectDB();
@@ -44,6 +45,7 @@ app.use("/api/assignments", assignmentRoutes);
 app.use("/api/helpdesk", helpDeskRoutes);
 app.use("/api/modules", moduleRoutes);
 app.use("/api/study-support", studySupportRoutes);
+app.use("/api/calendar-events", calendarEventRoutes);
 
 app.use((err, req, res, next) => {
   if (res.headersSent) return next(err);
